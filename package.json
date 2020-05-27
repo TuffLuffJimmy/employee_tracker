@@ -1,0 +1,28 @@
+{
+  "name": "employee_tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TuffLuffJimmy/employee_tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TuffLuffJimmy/employee_tracker/issues"
+  },
+  "homepage": "https://github.com/TuffLuffJimmy/employee_tracker#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "console.table": "^0.10.0",
+    "express": "^4.17.1",
+    "inquirer": "^7.1.0",
+    "moment": "^2.26.0",
+    "mysql2": "^2.1.0"
+  }
+}
