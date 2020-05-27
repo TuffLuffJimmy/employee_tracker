@@ -2,6 +2,15 @@ const axios = require('axios')
 const { writeFile } = require('fs')
 const { prompt } = require('inquirer')
 const { promisify } = require('util')
+const router = require('express').Router()
+const mysql = require('mysql2')
+const db = mysql.createConnection({
+  host: 'localhost',
+  database: 'employee_db',
+  port: 3306,
+  user: 'root',
+  password: 'rootroot'
+})
 
 // Function runs at the beginning of program to decide which action user wants to perform
 function chooseAction() {
@@ -45,6 +54,7 @@ function chooseAction() {
 
 function addDepartment() {
   console.log('addDepartment')
+
 }
 function addRole() {
   console.log('addRole')
@@ -53,7 +63,11 @@ function addEmployee() {
   console.log('addEmployee')
 }
 function viewDepartments() {
-  console.log('viewDepartments')
+  console.log('view Departments:')
+  db.query('SELECT * FROM departments', (err, departments) => {
+    if (err => console.log(error))
+    console.log(departments)
+  })
 }
 function viewRoles() {
   console.log('viewRoles')
